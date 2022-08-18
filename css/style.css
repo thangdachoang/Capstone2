@@ -1,0 +1,253 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    background-image: linear-gradient(0, rgba(0,0,0), rgba(0, 0, 0, 0.4)),
+    url(../img/best\ sale.webp);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 680px;
+}
+.header__bottom{
+    width: 60%;
+    margin-top: 50px;
+}
+.header__bottom h3{
+    color: #fff;
+    font-size: 45px;
+    font-weight: 600;
+    line-height: 55px;
+}
+.header__bottom h2{
+    color: transparent;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #fff;
+    font-size: 100px;
+    font-weight: 600;
+}
+.header__bottom p{
+    color: #eee;
+}
+.header__top i{
+    display: block;
+    padding: 10px 0px;
+    margin-left: 10px;
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+}
+.header__bottom button{
+    padding: 12px 35px;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 700;
+    border-radius: 10px;
+    background-color: transparent;
+    color: #ff6600;
+    border-color: #ff6600;
+}
+.header__bottom p{
+    padding: 25px 0;
+    font-size: 20px;
+}
+.header__top i:hover{
+    color: #ff6600;
+    transition: all 0.5s ease;
+}
+.header__bottom button:hover{
+    background-color: #ff6600;
+    color: #212529;
+    transition: all 1s ease;
+}
+.header__top .nav-item .nav-link{
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+}
+.header__top .nav-item .nav-link:hover{
+    color: #ff6600;
+    transition: all 0.5s ease;
+}
+.header__top .navbar-brand{
+    color: #fff;
+    font-size: 30px;
+    font-weight: 700;
+}
+.header__top .navbar-brand:hover{
+    color: #ff6600;
+    transition: all 0.5s ease;
+}
+
+/* contact */
+.contact{
+    background-color: black;
+}
+.contact__content{
+   padding: 50px 0;
+}
+.contact__detail a{
+    text-decoration: none;
+}
+.contact__detail ul{
+    list-style: none;
+}
+.contact__detail h4{
+    font-size: 22px;
+    font-weight: 700;
+    color: white;
+}
+.contact__detail h3{
+    font-size: 30px;
+    font-weight: 600;
+    color: white;
+}
+.contact__detail h3:hover{
+    color: #ff6600;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+.contact__detail p{
+    font-size: 17px;
+    color: #a5a2a1;
+    padding: 10px 0;
+}
+.contact__detail a{
+    font-size: 17px;
+    color: #a5a2a1;
+}
+.contact__detail a:hover{
+    color: #ff6600;
+    transition: all 0.5s;
+}
+.contact__detail li{
+    padding: 7px 0;
+}
+.contact__detail i{
+    width: 36px;
+    height: 36px;
+    color: #ff6600;
+    background-color: white;
+    line-height: 36px;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.contact__detail i:hover{
+    color: white;
+    background-color: #ff6600;
+    transition: all 0.5s ease;
+}
+.contact__detail input{
+    padding: 14px 20px;
+    width: 100%;
+    font-size: 18px;
+    border-radius: 10px;
+    border: solid 2px transparent;
+}
+.contact__detail input:focus{
+    outline: none;
+    border-color: #ff6600;
+    transition: all 0.5s ease;
+}
+.contact__detail button{
+    width: 100%;
+    padding: 14px 45px;
+    background-color: #ff6600;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 10px;
+    border: solid 2px transparent;
+    margin-top: 15px;
+}
+.contact__detail button:hover{
+    color: black;
+    transition: all 0.5s ease;
+}
+
+
+/* footer */
+footer{
+    background-color: black;
+    border-top: solid 1px #ffffff0d;
+    padding-top: 20px;
+}
+.footer__content ul{
+    list-style: none;
+}
+.footer__content a{
+    text-decoration: none;
+}
+.footer__content li{
+    display: inline;
+}
+.footer__left li{
+color: #ddd;
+}
+.footer__left a{
+    color: #ff6600;
+    transition: all 0.5s ease;
+}
+.footer__left a:hover{
+    color: #ddd;
+    transition: all 0.5s;
+}
+.footer__right{
+    text-align: right;
+}
+.footer__right a{
+    color: #a5a2a1;
+    transition: all 0.5s;
+    margin-left: 30px;
+}
+.footer__right a:hover{
+    color: #ff6600;
+    transition: all 0.5s ease;
+}
+/* Box */
+.cd-box {
+    position: fixed;
+    right: 0;
+    top: 30%;
+    height: 270px;
+    width: 80px;
+    background-color: #0D1326;
+    padding: 10px 5px 10px;
+    border-top-left-radius: 9px;
+    border-bottom-left-radius: 9px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content:space-around;
+}
+.cd-box a{
+    color: white;
+    text-decoration: none;
+}
+.cd-box a:hover{
+    color: #ff6600;
+    transition: all 0.5s ease;
+}
+.cd-box .fa-search{
+    cursor: pointer;
+    font-size: 20px;
+}
+.cd-box i:hover{
+    color: #ff6600;
+    transition: all 0.5s ease;
+}
+.cd-box .profile_img{
+     width: 40px;
+     height: 40px;
+     border-radius: 50%;
+     display: inline;
+}
+.cd-box p{
+    color: white;
+}

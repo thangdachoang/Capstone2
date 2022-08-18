@@ -1,0 +1,12 @@
+.tblSanPham tbody td img{
+    width: 100px;
+}
+.action{
+    width: 150px;
+}
+.tblSanPham{
+    text-align: center;
+}
+header{
+    text-align: center;
+}
