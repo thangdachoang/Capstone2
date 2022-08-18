@@ -32,21 +32,21 @@ function hieuThiSanPham(mangSP) {
     // console.log(newProducts);
   });
 
-  document.getElementById("Products").innerHTML = content;
+  document.getElementById("products").innerHTML = content;
 }
 
 // Hàm filter theo sản phẩm
 function timKiemSP() {
   spService.getProductList().then(function (result) {
-      // hieuThiSanPham(result.data);
-      // var timKiem = document.getElementById("selectType").value;
-      // if (timKiem != 0) {
-      //   // var mangSP = result.data;
-      //   var mangTK = result.data.filter((Products) => {
-      //     return Products.type == timKiem;
-      //   });
-      //   hieuThiSanPham(mangTK);
-      // }
+      hieuThiSanPham(result.data);
+      var timKiem = document.getElementById("selectType").value;
+      if (timKiem != 0) {
+        // var mangSP = result.data;
+        var mangTK = result.data.filter((Products) => {
+          return Products.type == timKiem;
+        });
+        hieuThiSanPham(mangTK);
+      }
     })
     .catch(function (error) {
 
@@ -56,7 +56,6 @@ function timKiemSP() {
 //Hàm thêm sản phẩm vào giỏ hàng
 
 var cart= [];
-
 
 
 
