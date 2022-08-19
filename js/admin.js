@@ -20,7 +20,7 @@ function hienThiTable(mangSP) {
         <td>${item.screen}</td>
         <td>${item.blackCamera}</td>
         <td>${item.frontCamera}</td>
-        <td><img  src="${item.img}"></img></td>
+        <td><img src="${item.img}"></img></td>
         <td>${item.desc}</td>
         <td>${item.type}</td>
         <td>
@@ -30,7 +30,7 @@ function hienThiTable(mangSP) {
         </tr>
         `;
     })
-    document.querySelector("#tblDanhSachSP").innerHTML = content;
+    document.querySelector("#listProduct").innerHTML = content;
 }
 
 function themSP() {

@@ -1,0 +1,178 @@
+header{
+    position: relative;
+    background-image: linear-gradient(0, rgba(0,0,0), rgba(0, 0, 0, 0.4));
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 750px;
+}
+.header__content i:hover{
+    color: #ff6600;
+    transition: all 0.5s ease;
+}
+.header__content .nav-item .nav-link{
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+}
+.header__content .nav-item .nav-link:hover{
+    color: #ff6600;
+    transition: all 0.5s ease;
+}
+.header__content .navbar-brand{
+    color: #fff;
+    font-size: 30px;
+    font-weight: 700;
+}
+.header__content .navbar-brand:hover{
+    color: #ff6600;
+    transition: all 0.5s ease;
+}
+
+/* cart */
+.cart{
+    position: absolute;
+    top: 100px;
+    right: 180px;
+}
+.cart img{
+    width: 100px;
+    height: 60px;
+    object-fit: cover;
+}
+.cart__content th{
+   width: 15%;
+   text-align: center;
+   color: #ff6600;
+}
+.cart__content td{
+    text-align: center;
+ }
+
+/* contact */
+.contact{
+    background-color: black;
+}
+.contact__content{
+   padding: 50px 0;
+}
+.contact__detail a{
+    text-decoration: none;
+}
+.contact__detail ul{
+    list-style: none;
+}
+.contact__detail h4{
+    font-size: 22px;
+    font-weight: 700;
+    color: white;
+}
+.contact__detail h3{
+    font-size: 30px;
+    font-weight: 600;
+    color: white;
+}
+.contact__detail h3:hover{
+    color: #ff6600;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+.contact__detail p{
+    font-size: 17px;
+    color: #a5a2a1;
+    padding: 10px 0;
+}
+.contact__detail a{
+    font-size: 17px;
+    color: #a5a2a1;
+}
+.contact__detail a:hover{
+    color: #ff6600;
+    transition: all 0.5s;
+}
+.contact__detail li{
+    padding: 7px 0;
+}
+.contact__detail i{
+    width: 36px;
+    height: 36px;
+    color: #ff6600;
+    background-color: white;
+    line-height: 36px;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.contact__detail i:hover{
+    color: white;
+    background-color: #ff6600;
+    transition: all 0.5s ease;
+}
+.contact__detail input{
+    padding: 14px 20px;
+    width: 100%;
+    font-size: 18px;
+    border-radius: 10px;
+    border: solid 2px transparent;
+}
+.contact__detail input:focus{
+    outline: none;
+    border-color: #ff6600;
+    transition: all 0.5s ease;
+}
+.contact__detail button{
+    width: 100%;
+    padding: 14px 45px;
+    background-color: #ff6600;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 10px;
+    border: solid 2px transparent;
+    margin-top: 15px;
+}
+.contact__detail button:hover{
+    color: black;
+    transition: all 0.5s ease;
+}
+
+/* footer */
+footer{
+    background-color: black;
+    border-top: solid 1px #ffffff0d;
+    padding-top: 20px;
+}
+.footer__content ul{
+    list-style: none;
+}
+.footer__content a{
+    text-decoration: none;
+}
+.footer__content li{
+    display: inline;
+}
+.footer__left li{
+color: #ddd;
+}
+.footer__left a{
+    color: #ff6600;
+    transition: all 0.5s ease;
+}
+.footer__left a:hover{
+    color: #ddd;
+    transition: all 0.5s;
+}
+.footer__right{
+    text-align: right;
+}
+.footer__right a{
+    color: #a5a2a1;
+    transition: all 0.5s;
+    margin-left: 30px;
+}
+.footer__right a:hover{
+    color: #ff6600;
+    transition: all 0.5s ease;
+}
