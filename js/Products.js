@@ -1,3 +1,4 @@
+
 function Products(tenSP, priceSP, screenSP, blackCameraSP, frontCameraSP, imgSP, descSP, type){
     // this.id = idSP;
     this.name = tenSP;
@@ -8,4 +9,5 @@ function Products(tenSP, priceSP, screenSP, blackCameraSP, frontCameraSP, imgSP,
     this.img = imgSP;
     this.desc = descSP;
     this.type= type;
+
 }
