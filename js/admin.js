@@ -1,4 +1,6 @@
 var spService = new ProductsService();
+var validation = new Validation();
+
 function getProductList() {
     spService.getProductList().then(function (result) {
         hienThiTable(result.data);
@@ -32,7 +34,6 @@ function hienThiTable(mangSP) {
     })
     document.querySelector("#listProduct").innerHTML = content;
 }
-
 function themSP() {
     var ten = document.querySelector("#TenSP").value;
     var gia = document.querySelector("#GiaSP").value;
@@ -43,9 +44,20 @@ function themSP() {
     var moTa = document.querySelector("#MoTa").value;
     var loaiSP = document.querySelector("#LoaiSP").value;
 
-    var sp = new Products(ten, gia, manHinh, camSau, camTruoc, hinhAnh, moTa, loaiSP);
 
-    spService.addProduct(sp)
+    var isValid = true;
+    isValid &= validation.checkEmpty(ten, "tbTenSP", "Tên sản phẩm không được để trống");
+    isValid &= validation.checkEmpty(gia, "tbGiaSP", "Giá không được để trống");
+    isValid &= validation.checkEmpty(manHinh, "tbManHinh", "Kích thước màn hình không được để trống");
+    isValid &= validation.checkEmpty(camSau, "tbCamSau", "Thông tin camera sau không được để trống");
+    isValid &= validation.checkEmpty(camTruoc, "tbCamTruoc", "Thông tin camera trước không được để trống");
+    isValid &= validation.checkEmpty(hinhAnh, "tbHinhSP", "Hình sản phẩm không được để trống");
+    isValid &= validation.checkEmpty(moTa, "tbMoTa", "Mô tả sản phẩm không được để trống");
+    isValid &= validation.checkDropdown("LoaiSP", "tbLoaiSP", "Xin vui lòng chọn loại sản phẩm");
+
+    if (isValid) {
+        var sp = new Products(ten, gia, manHinh, camSau, camTruoc, hinhAnh, moTa, loaiSP);
+        spService.addProduct(sp)
         .then(function (result) {
             console.log(result.data);
             getProductList();
@@ -54,6 +66,9 @@ function themSP() {
         .catch(function (error) {
             console.log(error);
         })
+    }
+
+ 
 };
 
 document.querySelector("#btnThemSP").addEventListener("click", function () {
