@@ -6,12 +6,9 @@ function getProductList() {
   spService
     .getProductList()
     .then(function (result) {
-      console.log(result);
-      console.log(result.data);
       hieuThiSanPham(result.data);
     })
     .catch(function (error) {
-      //   console.log(error);
     });
 }
 getProductList();
@@ -22,18 +19,19 @@ function hieuThiSanPham(mangSP) {
   mangSP.map(function (newProducts, index) {
 
     content += `
-            <div class="card" style="width: 18rem;">
+            <div class="col-3" style="margin-bottom:20px">
+              <div class="card">
                 <img src=${newProducts.img} class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">${newProducts.name}</h5>
-                    <p class="card-text">${newProducts.price}</p>
+                    <p class="card-text">$${newProducts.price}</p>
                     <button  onclick="themSPGioHang('${newProducts.id}')" class="btn btn-success">Thêm vào giỏ hàng</button>
+                </div>
                 </div>
             </div>
           
         `;
 
-    // console.log(newProducts);
   });
 
   document.getElementById("products").innerHTML = content;
@@ -104,6 +102,7 @@ function checkGioHang(cartItem) {
 
 function showGioHang(mangSP) {
   var content = "";
+  var quality = 0;
   mangSP.map(function (Products, index) {
     content += `
       <tr>
@@ -119,7 +118,9 @@ function showGioHang(mangSP) {
       </td>
       </tr>
     `
-  })
+    quality+= Products.quality;
+  });
+  document.getElementById("total-qly").innerHTML = quality;
   document.getElementById("tbodySP").innerHTML = content;
   totalBill();
 }
@@ -133,7 +134,6 @@ function changeQuanlity(action, id) {
       } else if (action === "plus") {
         quanlity++;
       }
-      // console.log(cart[index]);
       cart[index] = { ...Products, quality: quanlity }
     }
     showGioHang(cart);

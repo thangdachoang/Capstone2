@@ -65,18 +65,18 @@
             </div>
         </div>
     </header>
-    <section class="menu">
-        <h1>Sản Phẩm</h1>
+    <section class="menu container">
+        <h1>Products</h1>
         <div >
-            <form>
+            <form class="py-4">
                 <select id="selectType" onchange="timKiemSP()">
-                    <option value="0">Chọn sản phẩm</option>
+                    <option value="0">Tất cả</option>
                     <option value="Iphone">Iphone</option>
                     <option value="Samsung">SamSung</option>
                 </select>
             </form>
         </div>
-        <div id="products" ></div>
+        <div id="products" class="row" ></div>
     </section>
     <section class="contact" id="Contact">
         <div class="container contact__content">
@@ -151,9 +151,10 @@
             </i>
         </a>
 
-           <button style="border: none;background-color: #0d1326;" id="myBtn">
+           <button style="border: none;background-color: #0d1326; position: relative;" id="myBtn">
                 <i class="fa fa-shopping-cart" style="color: white;"></i>
                 <p style="font-size: 20px;">Buy</p>
+                <span id="total-qly">0</span>
             </button>
         
 
@@ -187,7 +188,7 @@
                 <span class="cart-total-price" id="totalBill"></span>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary close-footer">Đóng</button>
+                <button type="button" class="btn btn-secondary  close-footer" id="closeFooter">Đóng</button>
                 <button type="button" class="btn btn-primary order" id="thanhToan">Thanh Toán</button>
             </div>
         </div>
@@ -200,11 +201,14 @@
 var modal = document.getElementById("myModal");
 var btn = document.getElementById("myBtn");
 var span = document.getElementsByClassName("close")[0];
-
+var btnDong = document.getElementById("closeFooter");
 btn.onclick = function() {
   modal.style.display = "block";
 }
 span.onclick = function() {
+  modal.style.display = "none";
+}
+btnDong.onclick = function() {
   modal.style.display = "none";
 }
 window.onclick = function(event) {
